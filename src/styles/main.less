@@ -1,0 +1,100 @@
+@import "reset";
+
+//Variaveis 
+@bgColor: #2f2f4d;
+@borderColor: #e8d18e;
+@fontColor: #f5b349;
+@colorPrimary: #190e25;
+@colorError: #ff0043;
+@font: "Ubuntu", sans-serif;
+
+body {
+    background-color: @bgColor;
+    font-family: @font;
+    color: @fontColor;
+    overflow: hidden;
+}
+
+main {
+    display: block;
+    margin: 0 auto;
+    max-width: 35rem;
+    padding: 0 1rem 2rem;
+    position: relative;
+}
+
+header {
+    padding: 10px 0;
+    text-align: center;
+}
+
+button {
+    background-color: @fontColor;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    transition: 0.15s;
+}
+
+input {
+    background-color: @bgColor;
+    border: 2px solid @borderColor;
+    border-radius: 0.5rem;
+    color: @fontColor;
+    display: block;
+    font-size: 1.75rem;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: end;
+    width: 100%;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+
+    button {
+        color: @bgColor;
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+    }
+}
+
+#result {
+    border-width: 2px 2px 2px 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.resultado-final {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#copyToClipboard {
+    background-color: transparent;
+    border: solid @borderColor;
+    border-width: 2px;
+    border-radius: 0.5rem 0 0 0.5rem;
+    color: @fontColor;
+    cursor: pointer;
+    display: block;
+    height: 4.25rem;
+    width: 6rem;
+}
+
+.error {
+    background-color: @colorError;
+}
+
+.success {
+    border-color: @colorPrimary !important;
+    color: @colorPrimary !important;
+}
